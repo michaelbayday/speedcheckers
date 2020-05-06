@@ -1,0 +1,54 @@
+.main {
+  .toggles {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--white {
+        @extend .box;
+        background-color: white;
+      }
+      &--black {
+        @extend .box;
+        background-color: black;
+      }
+    }
+    .piece {
+      width: 80px;
+      height: 80px;
+      &:hover {
+        cursor: pointer;
+      }
+      &--red {
+        @extend .piece;
+        background-color: red;
+      }
+      &--black {
+        @extend .piece;
+        background-color: black;
+        border: 2px solid white;
+      }
+    }
+    .circle {
+      border-radius: 40px;
+    }
+    .selected {
+      border: 3px solid yellow;
+    }
+    .potential {
+      background-color: lightblue;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
